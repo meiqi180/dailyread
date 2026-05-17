@@ -1,142 +1,367 @@
-# Daily Read 每日英语阅读 — 项目验收文档
+# Daily Read - 每日英语表达学习 App
+
+Daily Read 是一款面向英语学习者的每日经典英文阅读 App。用户每天可以学习一句经典英文表达，查看中文翻译、表达解析、重点短语和仿写示例，并通过发音播放、收藏、学习记录和复习查询完成英语表达积累。
+
+本项目是一个 AI 产品经理作品集项目，使用 ChatGPT 进行需求分析、MVP 拆解和产品验收，使用 Claude Code 辅助完成 React 前端开发。
 
 ---
 
-## 一、项目概述
+## 在线预览
 
-Daily Read 是一款每日英语经典语句阅读 App。用户每天可以浏览英文经典台词或名著语句，查看中文翻译、表达解析和标准发音，并收藏喜欢的句子、追踪学习记录。
+Demo 地址：
 
-**产品目标：** 帮助用户提升英语语感、文笔和表达能力。
-
----
-
-## 二、项目结构
-
+```text
+待补充：部署后的在线链接
 ```
+
+GitHub 仓库：
+
+```text
+待补充：GitHub 仓库链接
+```
+
+---
+
+## 项目截图
+
+### 首页 - 今日阅读
+
+> 展示每日推荐英文句子、中文翻译、表达解析、发音、收藏和学习记录按钮。
+
+![首页截图](./docs/images/home.png)
+
+### 探索页 - 更多经典语句
+
+> 用户可以浏览更多英文经典表达，并通过关键词搜索相关内容。
+
+![探索页截图](./docs/images/explore.png)
+
+### 学习记录页
+
+> 用户可以查看每天学过的句子，并按日期进行复习。
+
+![学习记录截图](./docs/images/records.png)
+
+### 收藏页
+
+> 用户可以集中复习收藏过的英文表达。
+
+![收藏页截图](./docs/images/favorites.png)
+
+---
+
+## 核心功能
+
+| 模块 | 功能说明 | 用户价值 |
+|---|---|---|
+| 今日阅读 | 每日推荐一句经典英文表达 | 降低学习启动成本 |
+| 表达解析 | 提供中文翻译、重点表达、仿写句 | 帮助用户理解并迁移表达 |
+| 发音播放 | 使用 Web Speech API 播放英文朗读 | 提供标准发音参考 |
+| 探索更多 | 浏览更多电影台词、文学句子、写作表达 | 满足用户继续学习需求 |
+| 收藏功能 | 收藏喜欢的句子 | 方便长期积累 |
+| 学习记录 | 记录每天学过的内容 | 建立学习轨迹 |
+| 复习查询 | 支持关键词搜索历史学习内容 | 提高复习效率 |
+| 本地存储 | 使用 localStorage 保存数据 | 无需登录即可体验完整 MVP |
+
+---
+
+## 产品背景
+
+很多英语学习产品更关注背单词、刷题或语法训练，但用户在真实写作和表达中更缺少的是：
+
+- 高质量英文句式积累
+- 对经典表达的理解
+- 可迁移到写作和口语中的表达方式
+- 轻量、低压力的每日学习入口
+- 可回顾、可复习的学习记录
+
+Daily Read 希望通过“每日一句经典英文表达”的方式，帮助用户建立长期英语表达积累。
+
+---
+
+## 用户痛点
+
+目标用户主要包括：
+
+- 想提升英语写作表达的学生
+- 想积累高级英文句式的学习者
+- 准备四六级、考研、雅思、托福写作的人
+- 喜欢电影台词、名著语句和经典表达的人
+- 希望利用碎片时间学习英语的人
+
+核心痛点：
+
+1. 不知道如何积累高级英文表达  
+2. 学过的好句子容易遗忘  
+3. 缺少中文理解和表达解析  
+4. 缺少发音模仿参考  
+5. 学习内容缺少复习路径  
+
+---
+
+## 产品目标
+
+Daily Read 的目标是帮助用户完成：
+
+```text
+发现表达 → 理解表达 → 模仿表达 → 收藏积累 → 学习记录 → 后续复习
+```
+
+MVP 阶段重点验证：
+
+- 用户是否愿意每天打开 App 学习一句英文表达
+- 用户是否需要“再来一句”继续探索
+- 收藏和学习记录是否能提升复习体验
+- 表达解析和仿写句是否能帮助用户提升表达能力
+
+---
+
+## 用户流程
+
+```text
+打开 App
+↓
+查看今日推荐英文句子
+↓
+阅读中文翻译和表达解析
+↓
+点击发音按钮进行跟读
+↓
+点击“我已学习”保存记录
+↓
+点击“再来一句”或进入探索页继续学习
+↓
+收藏喜欢的句子
+↓
+在学习记录或收藏页复习
+```
+
+---
+
+## 技术栈
+
+| 技术 | 用途 |
+|---|---|
+| React | 前端页面与组件开发 |
+| Vite | 项目构建工具 |
+| React Router | 页面路由管理 |
+| Context API | 收藏和学习记录状态管理 |
+| localStorage | 本地数据持久化 |
+| Web Speech API | 英文发音播放 |
+| CSS | 页面样式与响应式布局 |
+
+---
+
+## 项目结构
+
+```text
 dailyread/
-├── index.html                     # HTML 入口
-├── package.json                   # 依赖配置（React 18 + Vite 5 + React Router 6）
-├── package-lock.json              # 稳定依赖锁文件
-├── vite.config.js                 # Vite 构建配置
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
 ├── public/
-│   └── favicon.svg                # 网站图标
+│   └── favicon.svg
 └── src/
-    ├── main.jsx                   # React 入口
-    ├── App.jsx                    # HashRouter + FavoritesProvider + RecordsProvider
-    ├── index.css                  # 全局 CSS 变量 / reset / 移动优先
+    ├── main.jsx
+    ├── App.jsx
+    ├── index.css
     ├── data/
-    │   └── quotes.js              # 34 条英文经典语句（6 分类 × 3 难度）
+    │   └── quotes.js
     ├── utils/
-    │   ├── storage.js             # localStorage 封装（try/catch 安全包裹）
-    │   ├── speech.js              # Web Speech API 封装（rate 0.9）
-    │   └── quoteHelpers.js        # 推荐/随机/搜索 + getLocalDateStr 本地日期
+    │   ├── storage.js
+    │   ├── speech.js
+    │   └── quoteHelpers.js
     ├── contexts/
-    │   ├── FavoritesContext.jsx    # 收藏全局 Context
-    │   └── RecordsContext.jsx      # 学习记录全局 Context（新 record 结构）
+    │   ├── FavoritesContext.jsx
+    │   └── RecordsContext.jsx
     ├── hooks/
-    │   └── useDailyQuote.js       # 每日推荐 + 随机去重
+    │   └── useDailyQuote.js
     ├── components/
-    │   ├── Navbar/                # 底部固定导航（4 tab）
-    │   ├── QuoteCard/             # 核心卡片 + recordButtonMode
-    │   ├── ExpressionItem/        # 重点表达条目
-    │   ├── PronunciationBtn/      # 发音按钮（脉冲动画）
-    │   ├── FavoriteBtn/           # 收藏按钮（实心/空心）
-    │   ├── SearchBar/             # 搜索框（带清除）
-    │   └── EmptyState/            # 空状态占位（3 种 + 引导）
+    │   ├── Navbar/
+    │   ├── QuoteCard/
+    │   ├── FavoriteBtn/
+    │   ├── PronunciationBtn/
+    │   ├── SearchBar/
+    │   └── EmptyState/
     └── pages/
-        ├── Home/                  # 每日推荐 + "我已学习" + "再来一句"
-        ├── Explore/               # 全部语句 + 全文搜索 + 每条可记录
-        ├── Records/               # 按日期分组 + 多维度搜索 + "再次复习"
-        └── Favorites/             # 收藏列表 + 重点表达
+        ├── Home/
+        ├── Explore/
+        ├── Records/
+        └── Favorites/
 ```
 
 ---
 
-## 三、运行方式
+## 本地运行方式
+
+### 1. 克隆项目
 
 ```bash
-cd dailyread/
-npm install
-npm run dev       # → http://localhost:5173
-npm run build     # 生产构建 → dist/
-npm run preview   # 预览构建
+git clone https://github.com/你的用户名/dailyread.git
+cd dailyread
 ```
 
-**技术栈：** React 18 + Vite 5 + React Router 6（仅 3 个运行时依赖）
+### 2. 安装依赖
 
-**部署：** HashRouter，可直接部署 GitHub Pages，子路径刷新不 404。
+```bash
+npm install
+```
 
----
+### 3. 启动开发环境
 
-## 四、路由与页面
+```bash
+npm run dev
+```
 
-| 路径 | 页面 | 说明 |
-|---|---|---|
-| `#/` | Home | 每日推荐（featured 大卡）+ "我已学习" + "再来一句" |
-| `#/explore` | Explore | 34 条全文搜索 + 每条可记录学习 |
-| `#/records` | Records | 学习记录按日期分组 + "再次复习" + 搜索 |
-| `#/favorites` | Favorites | 收藏列表 + 重点表达 + 可记录学习 |
+### 4. 构建项目
 
----
+```bash
+npm run build
+```
 
-## 五、核心功能
+### 5. 预览构建结果
 
-### 5.1 每日推荐
-- 34 条随机选取，同日一致，次日换新不重复
-- `displayQuote` / `dailyQuote` 分离："再来一句"不覆盖今日推荐
-- "再来一句"排除当前句（`getRandomQuote(excludeId)`）
-
-### 5.2 发音播放
-- Web Speech API，lang=en-US，rate=0.9
-- 播放脉冲动画，API 不可用时灰显降级
-
-### 5.3 收藏
-- FavoritesContext 全局同步 + localStorage 持久化
-- 爱心 toggle 即时切换，刷新保留
-
-### 5.4 学习记录
-- **记录结构：** `{ id: `${quoteId}_${date}`, quoteId, date, viewedAt }`
-- 首页/探索/收藏页每条卡均有学习按钮
-- 同日去重（`r.date === getLocalDateStr()`），跨天保留多条
-- Records 按日期分组（今天/昨天/日期格式）
-- 搜索覆盖 10+ 字段
-
-### 5.5 按钮语义
-| 页面 | mode | 未记录 | 已记录 |
-|---|---|---|---|
-| Home | 页面自带 | 我已学习 | 已记录 |
-| Explore | `learn` | 我已学习 | 已记录 |
-| Favorites | `learn` | 我已学习 | 已记录 |
-| Records | `review` | 再次复习 | 今日已复习 |
-
-### 5.6 搜索
-- 支持 english / chinese / source / tags / keyExpressions / scene / imitation / difficulty
-- 中文难度："初级" → easy / "中级" → medium / "高级" → hard
-
-### 5.7 时区安全
-- `getLocalDateStr()` 统一获取本地 YYYY-MM-DD，避免 UTC 偏移
-- 所有日期判断基于 `record.date`，不使用 `viewedAt.startsWith()`
+```bash
+npm run preview
+```
 
 ---
 
-## 六、验收清单
+## AI 辅助开发流程
 
-| 验收项 | 状态 |
-|---|---|
-| npm install 成功 | ✅ |
-| npm run build 成功（63 modules, 0 errors, 0 warnings） | ✅ |
-| 首页每日推荐 + 中文翻译 + 来源 + 解析 + 表达 + 仿写 | ✅ |
-| "再来一句"不重复 | ✅ |
-| 发音播放有视觉反馈 | ✅ |
-| 收藏全局同步 + 刷新保留 | ✅ |
-| 首页 "我已学习" → Records 立即可见 | ✅ |
-| Explore 每条也可记录学习 | ✅ |
-| Records 按日期分组（今天/昨天/日期） | ✅ |
-| Records 按钮为 "再次复习/今日已复习" | ✅ |
-| 同日去重 + 跨天保留 | ✅ |
-| 日期使用本地时间（非 UTC toISOString） | ✅ |
-| 空状态文案准确（"点击「我已学习」后"） | ✅ |
-| 搜索 "初级/中级/高级" 正确返回 | ✅ |
-| 无未使用变量/import | ✅ |
-| HashRouter 子路径刷新不 404 | ✅ |
-| package-lock.json 存在 | ✅ |
+本项目采用 AI 辅助产品开发工作流完成。
+
+```text
+用户需求
+↓
+ChatGPT 进行产品分析
+↓
+拆解 MVP 功能和验收标准
+↓
+整理 GitHub Issue
+↓
+Claude Code 执行开发
+↓
+提交代码版本
+↓
+ChatGPT 进行产品和代码验收
+↓
+生成优化 Issue
+↓
+多轮迭代完善 MVP
+```
+
+在这个过程中，我主要负责：
+
+- 产品定位
+- 用户需求分析
+- MVP 范围控制
+- 功能优先级判断
+- GitHub Issue 任务拆解
+- 交互与功能验收
+- 多轮迭代优化
+- 项目作品集包装
+
+---
+
+## 版本迭代记录
+
+### V1 - 项目基础版本
+
+完成内容：
+
+- React + Vite 项目初始化
+- 首页每日推荐
+- 英文句子展示
+- 中文翻译
+- 发音播放
+- 收藏功能
+- 学习记录基础功能
+
+### V2 - MVP 功能完善
+
+完成内容：
+
+- 增加 Explore 探索页
+- 增加 Favorites 收藏页
+- 增加 Records 学习记录页
+- 使用 Context 管理收藏和学习记录
+- 扩展 quotes 数据到 30 条以上
+- 支持 localStorage 持久化
+
+### V3 - 体验优化
+
+完成内容：
+
+- 学习记录按日期分组
+- Explore 页面支持“我已学习”
+- 修复“再来一句”连续重复问题
+- 增强搜索能力
+- 支持中文难度搜索
+- 优化 Records 页面复习按钮语义
+- 修复本地日期逻辑
+
+---
+
+## 当前已实现功能
+
+- [x] 每日推荐经典英文语句
+- [x] 中文翻译展示
+- [x] 来源展示
+- [x] 表达解析
+- [x] 重点表达
+- [x] 仿写示例
+- [x] 发音播放
+- [x] 再来一句
+- [x] 探索更多
+- [x] 收藏功能
+- [x] 学习记录
+- [x] 按日期分组
+- [x] 复习查询
+- [x] 搜索功能
+- [x] 中文难度搜索
+- [x] localStorage 数据持久化
+- [x] GitHub Pages 兼容路由
+
+---
+
+## 后续优化方向
+
+后续可以继续优化：
+
+1. 增加用户登录和云端同步  
+2. 增加每日学习打卡  
+3. 增加 AI 生成仿写练习  
+4. 增加发音跟读评分  
+5. 增加句子难度分级推荐  
+6. 增加学习统计图表  
+7. 增加更多公版文学和电影台词内容  
+8. 增加移动端 PWA 支持  
+
+---
+
+## 项目总结
+
+Daily Read 是一次从产品想法到可运行 MVP 的 AI 产品经理实践项目。
+
+这个项目的重点不只是完成一个英语学习 App，而是验证了一套 AI 辅助产品开发流程：
+
+```text
+需求分析 → 产品设计 → 任务拆解 → AI 编码 → 功能验收 → 迭代优化
+```
+
+通过这个项目，我完成了从用户需求到前端 MVP 的完整闭环，并重点锻炼了：
+
+- 产品需求分析能力
+- MVP 功能拆解能力
+- AI 工具协作能力
+- GitHub Issue 任务表达能力
+- 产品验收和迭代能力
+- 前端项目基础理解能力
+
+---
+
+## License
+
+本项目仅用于个人学习、作品集展示和产品经理项目实践。
