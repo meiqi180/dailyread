@@ -1,0 +1,33 @@
+.pron-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pron-btn:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.pron-btn--playing {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.pron-btn--disabled {
+  cursor: not-allowed;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}

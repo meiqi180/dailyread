@@ -1,0 +1,31 @@
+.expression-item {
+  background: var(--color-accent-bg);
+  border-radius: 8px;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.expression-item__main {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.expression-item__expr {
+  font-weight: 700;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.expression-item__meaning {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.expression-item__example {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  font-style: italic;
+  margin: 0;
+}

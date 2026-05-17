@@ -1,0 +1,261 @@
+.quote-card {
+  background: var(--color-bg-card);
+  border-radius: 12px;
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+}
+
+.quote-card--empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--space-xl);
+}
+
+/* Type badge */
+.quote-card__type {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  background: var(--color-accent-bg);
+  padding: 2px 10px;
+  border-radius: 100px;
+}
+
+.quote-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.quote-card__header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.quote-card__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* English quote */
+.quote-card__english {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  quotes: none;
+}
+
+.quote-card--featured .quote-card__english {
+  font-size: 1.5rem;
+}
+
+/* Chinese translation */
+.quote-card__chinese {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 var(--space-md);
+}
+
+/* Difficulty */
+.quote-card__difficulty {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 100px;
+}
+
+.quote-card__difficulty--easy {
+  color: #4a9c6c;
+  background: #e8f5e9;
+}
+
+.quote-card__difficulty--medium {
+  color: #b5835a;
+  background: #fdf0e6;
+}
+
+.quote-card__difficulty--hard {
+  color: #b55a5a;
+  background: #fde8e8;
+}
+
+/* Scene */
+.quote-card__scene {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  line-height: 1.5;
+}
+
+.quote-card__scene-label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Imitation */
+.quote-card__imitation {
+  margin-bottom: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.quote-card__imitation-text {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--color-accent);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Source */
+.quote-card__source {
+  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.quote-card__source-name {
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.quote-card__source-bio {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Analysis */
+.quote-card__analysis {
+  margin-bottom: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.quote-card__analysis p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.quote-card__section-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 var(--space-sm);
+}
+
+/* Expressions */
+.quote-card__expressions {
+  margin-bottom: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.quote-card__expression-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Tags */
+.quote-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.quote-card__tag {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  background: var(--color-accent-bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Viewed date */
+.quote-card__viewed {
+  margin-top: var(--space-sm);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Footer & record button */
+.quote-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.quote-card__record-btn {
+  padding: 4px var(--space-md);
+  background: var(--color-bg-card);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: auto;
+}
+
+.quote-card__record-btn:hover {
+  background: var(--color-accent-bg);
+}
+
+.quote-card__record-btn--done {
+  background: var(--color-accent-bg);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+  cursor: default;
+}
+
+/* ======= Compact variant ======= */
+.quote-card--compact .quote-card__english {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.quote-card--compact .quote-card__chinese {
+  font-size: 0.9rem;
+  margin-bottom: var(--space-sm);
+}
+
+/* ======= Desktop ======= */
+@media (min-width: 768px) {
+  .quote-card--featured {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--space-xl);
+  }
+
+  .quote-card--featured .quote-card__english {
+    font-size: 2rem;
+  }
+
+  .quote-card--compact .quote-card__english {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,23 @@
+.fav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fav-btn:hover {
+  color: var(--color-heart);
+  border-color: var(--color-heart);
+}
+
+.fav-btn--active {
+  color: var(--color-heart);
+  border-color: var(--color-heart);
+}
