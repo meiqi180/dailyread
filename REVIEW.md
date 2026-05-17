@@ -8,7 +8,7 @@ Daily Read 是一款面向英语学习者的每日经典英文阅读 App。用�
 
 ## 在线预览
 
-Demo 地址：
+Demo 地址：https://meiqi180.github.io/dailyread/
 
 
 ## 核心功能
